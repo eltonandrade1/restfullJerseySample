@@ -24,7 +24,7 @@ public class NotaDAO {
 
 		while (rs.next()) {
 			Nota nota = new Nota();
-			nota.setId(rs.getInt("ID_NOTE"));
+			nota.setId(rs.getInt("ID_NOTA"));
 			nota.setTitulo(rs.getString("TITULO"));
 			nota.setDescricao(rs.getString("DESCRICAO"));
 
@@ -47,7 +47,7 @@ public class NotaDAO {
 
 		if (rs.next()) {
 			nota = new Nota();
-			nota.setId(rs.getInt("ID_NOTE"));
+			nota.setId(rs.getInt("ID_NOTA"));
 			nota.setTitulo(rs.getString("TITULO"));
 			nota.setDescricao(rs.getString("DESCRICAO"));
 		}
@@ -77,7 +77,7 @@ public class NotaDAO {
 	public void editarNota(Nota nota, int idNota) throws Exception {
 		Connection conexao = BDConfig.getConnection();
 
-		String sql = "UPDATE TB_NOTA SET TITULO = ?, DESCRICAO = ? WHERE ID_NOTE = ?";
+		String sql = "UPDATE TB_NOTA SET TITULO = ?, DESCRICAO = ? WHERE ID_NOTA = ?";
 
 		PreparedStatement statement = conexao.prepareStatement(sql);
 		statement.setString(1, nota.getTitulo());
