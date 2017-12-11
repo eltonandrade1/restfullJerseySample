@@ -32,8 +32,6 @@ public class NotasService {
 	@Path("/list")
 	@Produces(MediaType.APPLICATION_JSON + CHARSET_UTF8)
 	public List<Nota> listarNotas() {
-	  
-	  
 		List<Nota> lista = null;
 		try {
 			lista = notaDAO.listarNotas();
