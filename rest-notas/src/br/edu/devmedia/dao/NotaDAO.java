@@ -11,6 +11,8 @@ import br.edu.devmedia.config.BDConfig;
 import br.edu.devmedia.entidade.Nota;
 
 public class NotaDAO {
+  
+  
 	
 	public List<Nota> listarNotas() throws Exception {
 		List<Nota> lista = new ArrayList<>();
